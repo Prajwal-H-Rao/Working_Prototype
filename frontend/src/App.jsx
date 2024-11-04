@@ -1,8 +1,12 @@
+import {Route,Routes} from 'react-router-dom'
 import './App.css'
+import BrowserEditor from './pages/Editor/BrowserEditor'
 
 function App() {
   return (
-    <div>App</div>
+    <Routes>
+      <Route path='/' element={<BrowserEditor/>}/>
+    </Routes>
   )
 }
 
