@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
 
 const BrowserEditor = () => {
   return (
-    <div>BrowserEditor</div>
-  )
-}
+    <>
+      <div>
+                
+      </div>
+    </>
+  );
+};
 
-export default BrowserEditor
+export default BrowserEditor;
