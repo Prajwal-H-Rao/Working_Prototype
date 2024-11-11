@@ -5,6 +5,8 @@ const cors = require('cors');
 
 const {Server:SocketServer} = require('socket.io')
 
+const {constructTree} = require('./utils/utils.js')
+
 const app = express();
 
 app.use(cors());
@@ -21,6 +23,11 @@ io.attach(server);
 io.on('connection',(socket)=>{
     console.log(`Socket connected:${socket.id}`)
 })
+
+// app.get('/tree',async(req,res)=>{
+//     const tree = await constructTree('/home/prao/projects/Working_Prototype/backend/node_modules')
+//     console.log(tree)   
+// })
 
 const port = process.env.PORT || 3000;
 server.listen(port,()=>{
